@@ -1,7 +1,7 @@
 html,
 body {
-	margin: 0;
-	padding: 0;
+	margin: 10;
+	padding: 10;
 }
 
 button {
@@ -46,7 +46,7 @@ input[type="checkbox"] {
 
 .todoapp {
 	background: #fff;
-	margin: 130px 0 40px 0;
+	margin: 120px 0 40px 0;
 	position: relative;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
 	            0 25px 50px 0 rgba(0, 0, 0, 0.1);
@@ -96,7 +96,7 @@ input[type="checkbox"] {
 	border: 0;
 	outline: none;
 	color: inherit;
-	padding:11.5px;
+	padding:15px;
 	border: 1px solid #999;
 	box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
 	box-sizing: border-box;
@@ -106,10 +106,10 @@ input[type="checkbox"] {
 }
 
 .new-todo {
-	padding: 16px 16px 16px 10px;
+	padding: 10px 10px 10px 10px;
 	border: none;
 	background: rgba(0, 0, 0, 0.003);
-	box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+	box-shadow: inset 0  1px rgba(0,0,0,0.03);
 }
 
 .main {

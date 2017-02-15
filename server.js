@@ -12,8 +12,6 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json())
 app.use(express.static('source'))
 
-
-
 app.get('/', function (req, res) {
   res.render('source/index')
 })
@@ -50,3 +48,5 @@ app.delete('/delete/', function (req, res) {
 })
 console.log('Listening to port 8010')
 app.listen(8010)
+
+module.exports = app

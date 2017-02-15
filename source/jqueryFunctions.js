@@ -11,20 +11,6 @@ var entityMap = {
 const escapeHtml = string => String(string).replace(/[&<>"'`=/]/g, s => entityMap[s])
 let listOfId = {}
 
-function checkall (checkStatus) {
-  $.ajax({
-    url: `/update/`,
-    type: 'PUT',
-    data: `checkAll=${checkStatus}`,
-    success: (result, status, xhr) => {
-      for (let key in listOfId) {
-        listOfId[key].status = checkStatus
-      }
-      render()
-    }
-  })
-}
-
 function deleteCompleted () {
   $.ajax({
     url: `/delete/`,
@@ -35,6 +21,19 @@ function deleteCompleted () {
         if (listOfId[key].status === true) {
           delete listOfId[key]
         }
+      }
+      render()
+    }
+  })
+}
+function checkall (checkStatus) {
+  $.ajax({
+    url: `/update/`,
+    type: 'PUT',
+    data: `checkAll=${checkStatus}`,
+    success: (result, status, xhr) => {
+      for (let key in listOfId) {
+        listOfId[key].status = checkStatus
       }
       render()
     }
